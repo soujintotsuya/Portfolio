@@ -259,7 +259,7 @@ div#content > img {
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 65pt;
+    font-size: 64pt;
     color:rgb(117, 214, 174);
     }
 
@@ -279,7 +279,7 @@ div#content > img {
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 65pt;
+    font-size: 64pt;
     color:rgb(117, 214, 174);
     margin: 0;
     }
@@ -325,4 +325,5 @@ div#content > img {
     color:rgb(117, 214, 174);
     margin: 0;
     }
+
 }
