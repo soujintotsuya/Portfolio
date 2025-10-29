@@ -153,6 +153,7 @@ div#content > img {
 #imghbox {
     position: absolute;
     width: 40%;
+    top:10%;
     left:30%;
     overflow: hidden;
     
@@ -327,3 +328,4 @@ div#content > img {
     }
 
 }
+
