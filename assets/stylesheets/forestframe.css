@@ -1,0 +1,328 @@
+body {
+    background-color: rgb(2, 113, 80);
+    margin:0;
+}
+
+#bgcontainer {
+    position: fixed;
+    top: 1%;
+    left:1%;
+    height:98vh;
+    width: 98%;
+    background-image: url(../images/ForestBackgroundWide.jpg);
+    background-position:center center ;
+    background-size: cover;
+    border-radius: 15px;
+    z-index: -1;
+    
+}
+
+#logo {
+    position: relative;
+    width: 30%;
+    left:35%;
+    top: -20%;
+}
+
+div#content {
+    margin-top: 10%;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 5%;
+
+}
+
+div#content > img {
+    grid-column: span 5;
+}
+
+.textbubble {
+    background-color: rgba(1, 82, 71,0.7);
+    margin:0;
+    
+}
+
+.tb1 {
+    grid-column: span 4;
+    position: relative;
+    overflow: hidden;
+    margin:0;
+    border-radius:0 50cap;
+   
+}
+
+#lotus {
+    border-radius: 0px 50cap;
+    border:10px solid rgb(3, 83, 59);
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin:0;
+    float: left;
+    
+}
+
+#plan {
+    border-radius:50cap 0;
+    border:10px solid rgb(3, 83, 59);
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin:0;
+    float: right;
+}
+
+.tb2 {
+    grid-column: span 4;
+    position: relative;
+    overflow: hidden;
+    margin:0;
+    border-radius:50cap 0;
+}
+
+.imgallery {
+    
+    grid-column: span 5;
+    grid-row: span 2;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+
+.deco {
+    height: 20%;
+}
+
+.tb1header {
+    text-align: center;
+    margin:0; 
+}
+
+.tb2header {
+    text-align: center;
+    margin:0;
+}
+
+
+
+
+
+
+
+.headerbox2 {
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    right:18%;
+    display: inline-block;
+    overflow: hidden;
+    
+}
+
+.textbox1 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    right: 7%;
+    top: 37%;
+    
+
+}
+
+.textbox2 {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    right: 40%;
+    top: 37%;
+}
+
+.expage {
+    border-radius: 80px;
+    position:relative ;
+    top:20%;
+    height: 70%;
+    display: inline-block;
+    padding:1%;
+}
+
+#imghbox {
+    position: absolute;
+    width: 40%;
+    left:30%;
+    overflow: hidden;
+    
+}
+
+
+
+@media (max-width:1399px) {
+    .headerbox1 {
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    right:21%;
+    display: inline-block;
+    overflow: auto;
+    }
+
+    .header {
+    display:inline-block;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40pt;
+    color:rgb(117, 214, 174);
+    }
+
+    .description {
+    display: inline;
+    color:white;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 20pt;
+    font-style: normal;
+    margin:0;
+    }
+
+    #galleryh {
+    
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40pt;
+    color:rgb(117, 214, 174);
+    margin: 0;
+    }
+
+}
+
+@media (min-width:1400px) and (max-width:1699px) {
+
+   .headerbox1 {
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    right:17%;
+    display: inline-block;
+    overflow: auto;
+    }
+
+    .header {
+    display:inline-block;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50pt;
+    color:rgb(117, 214, 174);
+    }
+
+    .description {
+    display: inline;
+    color:white;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 22pt;
+    font-style: normal;
+    margin:0;
+    }
+
+    #galleryh {
+    
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50pt;
+    color:rgb(117, 214, 174);
+    margin: 0;
+    } 
+}
+
+@media (min-width:1700px) and (max-width:2199px) {
+    .headerbox1 {
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    right:10%;
+    display: inline-block;
+    overflow: auto;
+    }
+
+    .header {
+    display:inline-block;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 65pt;
+    color:rgb(117, 214, 174);
+    }
+
+    .description {
+    display: inline;
+    color:white;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 28pt;
+    font-style: normal;
+    margin:0;
+    }
+
+    #galleryh {
+    
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 65pt;
+    color:rgb(117, 214, 174);
+    margin: 0;
+    }
+
+}
+
+@media (min-width:2200px) { 
+    .headerbox1 {
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    right:10%;
+    display: inline-block;
+    overflow: auto;
+    }
+
+    .header {
+    display:inline-block;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 80pt;
+    color:rgb(117, 214, 174);
+    }
+
+    .description {
+    display: inline;
+    color:white;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 40pt;
+    font-style: normal;
+    margin:0;
+    }
+
+    #galleryh {
+    
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 80pt;
+    color:rgb(117, 214, 174);
+    margin: 0;
+    }
+}
