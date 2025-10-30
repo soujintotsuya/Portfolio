@@ -161,9 +161,57 @@ div#content > img {
   padding-top: 10px; /* etwas Abstand zum Text */
 }
 
+@media (max-width:1099px) {
 
+    .headerbox1 {
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    right:21%;
+    display: inline-block;
+    overflow: auto;
+    }
 
-@media (max-width:1399px) {
+    .header {
+    display:inline-block;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32pt;
+    color:rgb(117, 214, 174);
+    }
+
+    .description {
+    display: inline;
+    color:white;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 16pt;
+    font-style: normal;
+    margin:0;
+    }
+
+    #galleryh {
+    
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32pt;
+    color:rgb(117, 214, 174);
+    margin: 0;
+    }
+    .expage {
+        border-radius: 80px;
+        vertical-align: top;
+        height: 300px;
+        display: inline-block;
+        padding:0 1%;
+    }
+
+}
+
+@media (min-width:1100px) and (max-width:1399px) {
     .headerbox1 {
     position: absolute;
     width: 50%;
@@ -351,7 +399,7 @@ div#content > img {
         .expage {
         border-radius: 80px;
         vertical-align: top;
-        height: 900px;
+        height: 800px;
         display: inline-block;
         padding:0 1%;
     }
