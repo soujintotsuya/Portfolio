@@ -87,9 +87,8 @@ div#content > img {
     
     grid-column: span 5;
     grid-row: span 2;
-    overflow: auto;
-    white-space: nowrap;
     padding: 10px;
+    position: relative;
 }
 
 
@@ -141,21 +140,25 @@ div#content > img {
     top: 37%;
 }
 
-.expage {
-    border-radius: 80px;
-    position:relative ;
-    top:20%;
-    height: 70%;
-    display: inline-block;
-    padding:1%;
-}
+
 
 #imghbox {
-    position: absolute;
-    width: 40%;
-    left:30%;
-    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(1, 82, 71, 0.8);
+    padding: 10px 0;
+    z-index: 10;
+    margin-bottom: 0;
     
+}
+
+.scrollarea {
+  overflow-x: auto;
+  overflow-y: hidden; /* Kein vertikales Scrollen! */
+  white-space: nowrap;
+  padding-top: 10px; /* etwas Abstand zum Text */
 }
 
 
@@ -199,7 +202,13 @@ div#content > img {
     color:rgb(117, 214, 174);
     margin: 0;
     }
-
+    .expage {
+        border-radius: 80px;
+        vertical-align: top;
+        height: 400px;
+        display: inline-block;
+        padding:0 1%;
+    }
 }
 
 @media (min-width:1400px) and (max-width:1699px) {
@@ -242,6 +251,14 @@ div#content > img {
     color:rgb(117, 214, 174);
     margin: 0;
     } 
+    .expage {
+        border-radius: 80px;
+        vertical-align: top;
+        height: 500px;
+        display: inline-block;
+        padding:0 1%;
+    }
+
 }
 
 @media (min-width:1700px) and (max-width:2199px) {
@@ -259,7 +276,7 @@ div#content > img {
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 64pt;
+    font-size: 65pt;
     color:rgb(117, 214, 174);
     }
 
@@ -279,11 +296,17 @@ div#content > img {
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 64pt;
+    font-size: 65pt;
     color:rgb(117, 214, 174);
     margin: 0;
     }
-
+    .expage {
+        border-radius: 80px;
+        vertical-align: top;
+        height: 700px;
+        display: inline-block;
+        padding:0 1%;
+    }
 }
 
 @media (min-width:2200px) { 
@@ -325,7 +348,11 @@ div#content > img {
     color:rgb(117, 214, 174);
     margin: 0;
     }
-
+        .expage {
+        border-radius: 80px;
+        vertical-align: top;
+        height: 900px;
+        display: inline-block;
+        padding:0 1%;
+    }
 }
-
-
