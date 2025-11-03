@@ -151,7 +151,6 @@ body {
     top: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(1, 82, 71, 0.8);
     padding: 10px 0;
     z-index: 10;
     margin-bottom: 0;
@@ -410,4 +409,5 @@ body {
         display: inline-block;
         padding:0 1%;
     }
+
 }
