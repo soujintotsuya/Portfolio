@@ -24,16 +24,17 @@ body {
     top: -20%;
 }
 
-div#content {
+#content {
     margin-top: 10%;
     display:grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(5,1fr);
     gap: 5%;
+    position: relative;
 
 }
 
-div#content > img {
+#content > img {
     grid-column: span 5;
 }
 
@@ -84,7 +85,6 @@ div#content > img {
 }
 
 .imgallery {
-    
     grid-column: span 5;
     grid-row: span 2;
     padding: 10px;
@@ -106,19 +106,23 @@ div#content > img {
     margin:0;
 }
 
-
-
-
-
-
-
-.headerbox2 {
+.headerbox1 {
     position: absolute;
     width: 50%;
     height: 40%;
-    right:18%;
+    right:16%;
     display: inline-block;
     overflow: hidden;
+    }
+
+.headerbox2 {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    right:34%;
+    display: inline-block;
+    overflow: hidden;
+    
     
 }
 
@@ -155,22 +159,52 @@ div#content > img {
 }
 
 .scrollarea {
+  display: flex;
   overflow-x: auto;
-  overflow-y: hidden; /* Kein vertikales Scrollen! */
-  white-space: nowrap;
-  padding-top: 10px; /* etwas Abstand zum Text */
+  overflow-y: hidden;
+  gap: 2rem;
+  align-items: center;
+  scroll-behavior: smooth;
+  height: 40vh; /* Galerie-Höhe — passt du nach Geschmack an */
+  padding-bottom: 1rem;
+}
+
+.footer {
+        border-radius: 4cap;
+        position: relative;
+        width: 50%;
+        height: 55px;
+        left: 25%;
+        margin-bottom: 3%;
+        background-color: rgba(1, 82, 71, 0.8);
+        
+}
+
+#motto {
+    color: rgb(18, 224, 145);
+    text-align: center;
+    font-family: "Delius", cursive;
+    font-weight: 500;
+    font-size: 16pt;
+    font-style: normal;
+    margin-bottom:0;
+    
+}
+
+#disclaimer {
+    color:white;
+    text-align: center;
+    margin-top:0;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 @media (max-width:1099px) {
 
-    .headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    right:21%;
-    display: inline-block;
-    overflow: auto;
-    }
+    
 
     .header {
     display:inline-block;
@@ -208,18 +242,12 @@ div#content > img {
         display: inline-block;
         padding:0 1%;
     }
+    
 
 }
 
 @media (min-width:1100px) and (max-width:1399px) {
-    .headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    right:21%;
-    display: inline-block;
-    overflow: auto;
-    }
+    
 
     .header {
     display:inline-block;
@@ -261,14 +289,7 @@ div#content > img {
 
 @media (min-width:1400px) and (max-width:1699px) {
 
-   .headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    right:17%;
-    display: inline-block;
-    overflow: auto;
-    }
+   
 
     .header {
     display:inline-block;
@@ -310,14 +331,7 @@ div#content > img {
 }
 
 @media (min-width:1700px) and (max-width:2199px) {
-    .headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    right:10%;
-    display: inline-block;
-    overflow: auto;
-    }
+    
 
     .header {
     display:inline-block;
@@ -358,14 +372,7 @@ div#content > img {
 }
 
 @media (min-width:2200px) { 
-    .headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    right:10%;
-    display: inline-block;
-    overflow: auto;
-    }
+    
 
     .header {
     display:inline-block;
