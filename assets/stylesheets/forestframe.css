@@ -62,7 +62,7 @@ body {
     display:block;
     margin-right:0.5rem;
     float: left;
-    shape-outside: circle(83% at 21% 90%);
+    shape-outside: circle(79% at 21% 90%);
     
     
     
@@ -335,4 +335,5 @@ body {
         .description {
             font-size:clamp(0.8rem,3vw,3rem);
         }
+
     }
