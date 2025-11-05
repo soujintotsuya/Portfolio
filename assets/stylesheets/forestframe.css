@@ -28,7 +28,7 @@ body {
     margin-top: 10%;
     display:grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5,160px);
     gap: 5%;
     position: relative;
 
@@ -45,28 +45,31 @@ body {
 }
 
 .tb1 {
-    grid-column: span 4;
-    position: relative;
-    overflow: hidden;
+    grid-column: span 5;
+    
+    overflow-y: hidden;
     margin:0;
-    border-radius:0 50cap;
+    border-radius:0 15cap;
    
 }
 
 #lotus {
-    border-radius: 0px 50cap;
+    border-radius: 0px 15cap;
     border:10px solid rgb(3, 83, 59);
     width: 40%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    margin:0;
+    display:block;
+    margin-right:0.5rem;
     float: left;
+    shape-outside: circle(83% at 21% 90%);
+    
+    
     
 }
 
 #plan {
-    border-radius:50cap 0;
+    border-radius:15cap 0;
     border:10px solid rgb(3, 83, 59);
     width: 40%;
     height: 100%;
@@ -74,14 +77,16 @@ body {
     display: block;
     margin:0;
     float: right;
+    margin-left: 0.5rem;
+    shape-outside: circle(84% at 79% 93%);
 }
 
 .tb2 {
-    grid-column: span 4;
-    position: relative;
+    grid-column:span 5;
+    
     overflow: hidden;
     margin:0;
-    border-radius:50cap 0;
+    border-radius:15cap 0;
 }
 
 .imgallery {
@@ -89,6 +94,8 @@ body {
     grid-row: span 2;
     padding: 10px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -97,129 +104,97 @@ body {
 }
 
 .tb1header {
-    text-align: center;
-    margin:0; 
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+   
+}
+
+.tb1des {
+    padding-right: 2rem;
 }
 
 .tb2header {
-    text-align: center;
-    margin:0;
+    margin:0.7rem 0 0.7rem 0;
+    text-align: right;
 }
 
-.headerbox1 {
-    position: absolute;
-    width: 50%;
-    height: 40%;
-    right:16%;
-    display: inline-block;
-    overflow: hidden;
-    }
-
-.headerbox2 {
-    position: absolute;
-    width: 40%;
-    height: 40%;
-    right:34%;
-    display: inline-block;
-    overflow: hidden;
-    
-    
+.tb2des {
+    padding-left:2rem;
+    text-align: right;
 }
-
-.textbox1 {
-    position: absolute;
-    width: 50%;
-    height: 60%;
-    right: 7%;
-    top: 37%;
-    
-
-}
-
-.textbox2 {
-    position: absolute;
-    width: 50%;
-    height: 60%;
-    right: 40%;
-    top: 37%;
-}
-
-
 
 #imghbox {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 10;
-    margin-bottom: 0;
+    flex: 0 0 auto;
+    margin-bottom: 0.5rem;
     
 }
 
 .scrollarea {
+    flex: 1 1 auto;
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   gap: 2rem;
   align-items: center;
   scroll-behavior: smooth;
-  height: 40vh; /* Galerie-Höhe — passt du nach Geschmack an */
-  padding-bottom: 1rem;
+  
 }
 
 .footer {
-        border-radius: 4cap;
-        position: relative;
-        width: 50%;
-        height: 55px;
-        left: 25%;
-        margin-bottom: 3%;
-        background-color: rgba(1, 82, 71, 0.8);
+    border-radius: 4cap;
+    width: 50%;
+    height: 55px;
+    left: 25%;
+    margin:0 auto 3%;
+    background-color: rgba(1, 82, 71, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
         
 }
 
 #motto {
+    
     color: rgb(18, 224, 145);
     text-align: center;
     font-family: "Delius", cursive;
     font-weight: 500;
-    font-size: 16pt;
+    font-size: clamp(0.9rem,3.4vw,1.5rem);
     font-style: normal;
     margin-bottom:0;
     
-}
+    }
 
-#disclaimer {
+    #disclaimer {
+    
     color:white;
     text-align: center;
     margin-top:0;
     font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
+    font-size: clamp(0.7rem,2vw,1.2rem);
     font-weight: 400;
     font-style: normal;
 
-}
-
-@media (max-width:1099px) {
-
-    
+    }
 
     .header {
-    display:inline-block;
+    display:block;
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 32pt;
+    font-size:clamp(1rem,5.8vw,5rem);
     color:rgb(117, 214, 174);
     }
 
     .description {
-    display: inline;
+    display: block;
     color:white;
     font-family: "Delius", cursive;
     font-weight: 500;
-    font-size: 16pt;
+    font-size:clamp(0.8rem,2.4vw,2.5rem);
     font-style: normal;
     margin:0;
     }
@@ -230,184 +205,134 @@ body {
     font-family: "Sacramento", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 32pt;
+    font-size: clamp(1rem,5.8vw,5rem);
     color:rgb(117, 214, 174);
     margin: 0;
     }
-    .expage {
-        border-radius: 80px;
-        vertical-align: top;
-        height: 300px;
-        display: inline-block;
-        padding:0 1%;
-    }
-    
-
-}
-
-@media (min-width:1100px) and (max-width:1399px) {
-    
-
-    .header {
-    display:inline-block;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 40pt;
-    color:rgb(117, 214, 174);
+    .scrollarea img {
+    height: 80%;       /* Füllt die Höhe der Scrollarea */
+    width: auto;        /* Behält Seitenverhältnis */
+    flex: 0 0 auto;     /* Verhindert, dass das Bild gedehnt oder gestaucht wird */
+    object-fit: cover;
+    border-radius: 1rem;
     }
 
-    .description {
-    display: inline;
-    color:white;
-    font-family: "Delius", cursive;
-    font-weight: 500;
-    font-size: 20pt;
-    font-style: normal;
-    margin:0;
+    @media (min-width:480px) {
+
+        #lotus {
+            shape-outside: circle(94% at 21% 103%);
+            
+        }
+
+        #plan {
+            shape-outside: circle(95% at 78% 105%);
+        }
     }
 
-    #galleryh {
-    
-    text-align: center;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 40pt;
-    color:rgb(117, 214, 174);
-    margin: 0;
-    }
-    .expage {
-        border-radius: 80px;
-        vertical-align: top;
-        height: 400px;
-        display: inline-block;
-        padding:0 1%;
-    }
-}
+    @media (min-width:768px) {
+        #content {
+            grid-template-rows: repeat(5,200px);
+            
+        }
 
-@media (min-width:1400px) and (max-width:1699px) {
+        #lotus {
+            shape-outside: circle(96% at 23% 108%);
+            border-radius: 0px 25cap;
+        }
 
-   
+        #plan {
+            shape-outside: circle(98% at 79% 112%);
+            border-radius: 25cap 0px;
+        }
+        .tb1 {
+        grid-column: span 5;
+        overflow-y: hidden;
+        margin:0;
+        border-radius:0 25cap;
+        }
 
-    .header {
-    display:inline-block;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50pt;
-    color:rgb(117, 214, 174);
-    }
+        .tb2 {
+        grid-column:span 5;
+        overflow: hidden;
+        margin:0;
+        border-radius:25cap 0;
+        }
 
-    .description {
-    display: inline;
-    color:white;
-    font-family: "Delius", cursive;
-    font-weight: 500;
-    font-size: 22pt;
-    font-style: normal;
-    margin:0;
     }
 
-    #galleryh {
-    
-    text-align: center;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50pt;
-    color:rgb(117, 214, 174);
-    margin: 0;
-    } 
-    .expage {
-        border-radius: 80px;
-        vertical-align: top;
-        height: 500px;
-        display: inline-block;
-        padding:0 1%;
+    @media (min-width:1024px) {
+        #content {
+            grid-template-rows: repeat(5,270px);
+        }
+        #lotus {
+            shape-outside: circle(91% at 29% 112%);
+            border-radius: 0px 25cap;
+        }
+        #plan {
+            shape-outside: circle(102% at 79% 113%);
+        }
     }
 
-}
+    @media (min-width:1440px) {
+        #content {
+            grid-template-rows: repeat(5,300px);
+        }
+        #lotus {
+            shape-outside: circle(94% at 29% 128%);
+            border-radius: 0px 30cap;
+        }
+        #plan {
+            shape-outside: circle(103% at 79% 120%);
+            border-radius: 30cap 0px;
+        }
+        .tb1 {
+        grid-column: span 5;
+        overflow-y: hidden;
+        margin:0;
+        border-radius:0 30cap;
+        }
 
-@media (min-width:1700px) and (max-width:2199px) {
-    
+        .tb2 {
+        grid-column:span 5;
+        overflow: hidden;
+        margin:0;
+        border-radius:30cap 0;
+        }
+        
 
-    .header {
-    display:inline-block;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 65pt;
-    color:rgb(117, 214, 174);
     }
 
-    .description {
-    display: inline;
-    color:white;
-    font-family: "Delius", cursive;
-    font-weight: 500;
-    font-size: 28pt;
-    font-style: normal;
-    margin:0;
-    }
+    @media (min-width:1920px) {
+        #content {
+            grid-template-rows: repeat(5,365px);
+        }
+        #lotus {
+            shape-outside: circle(97% at 29% 136%);
+            border-radius: 0px 35cap;
+        }
+        #plan {
+            shape-outside: circle(105% at 79% 124%);
+            border-radius: 35cap 0px;
+        }
+        .tb1 {
+        grid-column: span 5;
+        overflow-y: hidden;
+        margin:0;
+        border-radius:0 35cap;
+        }
 
-    #galleryh {
-    
-    text-align: center;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 65pt;
-    color:rgb(117, 214, 174);
-    margin: 0;
-    }
-    .expage {
-        border-radius: 80px;
-        vertical-align: top;
-        height: 700px;
-        display: inline-block;
-        padding:0 1%;
-    }
-}
+        .tb2 {
+        grid-column:span 5;
+        overflow: hidden;
+        margin:0;
+        border-radius:35cap 0;
+        }
+        
+        .header {
+            font-size:clamp(1rem,6.2vw,7rem);
+        }
 
-@media (min-width:2200px) { 
-    
-
-    .header {
-    display:inline-block;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 80pt;
-    color:rgb(117, 214, 174);
+        .description {
+            font-size:clamp(0.8rem,3vw,3rem);
+        }
     }
-
-    .description {
-    display: inline;
-    color:white;
-    font-family: "Delius", cursive;
-    font-weight: 500;
-    font-size: 40pt;
-    font-style: normal;
-    margin:0;
-    }
-
-    #galleryh {
-    
-    text-align: center;
-    font-family: "Sacramento", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 80pt;
-    color:rgb(117, 214, 174);
-    margin: 0;
-    }
-        .expage {
-        border-radius: 80px;
-        vertical-align: top;
-        height: 800px;
-        display: inline-block;
-        padding:0 1%;
-    }
-
-}
