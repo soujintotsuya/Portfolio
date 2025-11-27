@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/main.css" />
+    <style>
+    @media (max-width: 991.98px) {
+        /* also im echten "Mobile-Mode" */
+        .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          /* optional */
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          /* optional */
+          text-align: center;
+          /* Zentrierte Items */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.25rem !important;
+        }
+        #bfwlogo {
+          width: 200%;
+          height: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.5rem !important;
+        }
+    }
+
+    html,body {
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1; /* nimmt den verfügbaren Platz ein → Footer rutscht nach unten */
+    }
+
+    .carousel-item {
+        aspect-ratio: 16 / 9;
+        /* oder 4/3, 3/2, whatever du willst */
+    }
+
+    .section {
+        --bs-bg-opacity: 0.4;
+    }
+
+    .fsection {
+        --bs-bg-opacity: 0.5;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+    }
+
+    .navbar-toggler {
+        z-index: 1030;
+    }
+
+    .imglink > img {
+        width: 100%;
+        aspect-ratio: 916/636;
+        object-fit: cover;
+        object-position: 50% 4%;
+    }
+    </style>
+    <title>divrent - About</title>
+  </head>
+  <body class="gradient-background">
+    <header
+      class="sticky-top mx-auto col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5 text-center shadow"
+    >
+      <nav class="navbar navbar-expand-lg">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-center"
+        >
+          <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="140"
+              height="50"
+              viewBox="0 0 700 350"
+              role="img"
+              aria-label="divrent logo"
+            >
+              <!-- Hintergrund (transparent) -->
+              <rect width="100%" height="100%" fill="none" />
+
+              <!-- Linke Winkelklammer als abgerundeter Strich -->
+              <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+              <path
+                d="M56 46 L150 180 L56 314"
+                fill="none"
+                stroke="#000000"
+                stroke-width="36"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="1"
+              />
+
+              <!-- Text "divrent" -->
+              <text
+                x="200"
+                y="230"
+                font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                font-weight="700"
+                font-size="162"
+                fill="#000000"
+                letter-spacing="-2"
+              >
+                divrent
+              </text>
+            </svg></a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Projects
+                </a>
+                <ul class="dropdown-menu bg-tealmintbright rounded-3">
+                  <li class="">
+                    <a
+                      class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/projectoverview.html"
+                      >Projects Overview</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li class="">
+                    <a
+                      class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/ForestFrame.html"
+                      >ForestFrame</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/BirthdayInvite.html"
+                      >Birthday Invite</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/MovieRanking.html"
+                      >Movie Ranking</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../public/Contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="container col-11 col-sm-10 col-xxl-8 bg-body-tertiary section rounded-4 my-5 py-4"
+      >
+        <hr
+          class="col-8 mx-auto border-tealmintbright shadow"
+          style="border-top-width: 3px"
+        />
+        <h1 class="text-center display-3 fw-normal">About Me!</h1>
+        <p class="lead px-5 text-center">
+          Hi! My name's Leon, tho I prefer to go by my alias "Soujin" in a
+          professional context. I am at the end of my twenties and always had a
+          great interest in anything tech, tho I never really got into it
+          because I did not think I'd have the qualification for it, well here I
+          am.
+        </p>
+        <hr
+          class="col-8 mx-auto border-tealmintbright shadow"
+          style="border-top-width: 3px"
+        />
+      </section>
+      <section
+        class="col-11 rounded-2 mx-auto shadow bg-body-tertiary fsection my-4 mx-0"
+      >
+        <section>
+          <div class="container px-4 pt-5 pb-3">
+            <div class="row flex-lg-row align-items-center g-5 ps-xl-5">
+              <div class="col-lg-6 col-xl-5">
+                <p class="fs-6 fw-light pt-3">
+                  My journey began after a long period of mental struggles and
+                  not really knowing what to do with myself. Thankfully in
+                  Germany there is social security measures in place, which lead
+                  me to participate in a job orientation program at the "BFW
+                  Stralsund" during which I also learned that I was anything but
+                  underqualified to persue my interest in tech and so I made the
+                  decision to enlist in an apprenticeship as a Software
+                  Developer (Fachinformatiker für Anwendungsentwicklung), which,
+                  as of right now, yet still lies ahead of me.
+                </p>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-7">
+                <a href="https://www.bfw-stralsund.de/">
+                  <img
+                    id="bfwlogo"
+                    src="../assets/images/bfw-logo.png"
+                    class="rounded-2 d-block mx-md-auto img-fluid"
+                    alt="Logo of the 'Berufsförderungswerk Stralsund', at job training facility located in Stralsund, Germany"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr
+          class="col-10 mx-auto border-tealmintbright shadow"
+          style="border-top-width: 3px"
+        />
+        <section>
+          <div class="container px-4 pt-4 pb-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5">
+              <div class="col-lg-6 col-xl-5">
+                <p class="fs-6 fw-light">
+                  The next step I took was to enlist in several Web Development
+                  courses on Udemy because I had heard, that there's many topics
+                  the apprenticeship would not cover properly and I figured Web
+                  Development is the Software Development topic with the most
+                  immediate feedback and visible progress and thus would feel
+                  the most rewarding when progressing first. The first course I
+                  started out at was the one I linked here by Dr. Angela Yu and
+                  this is still what I am currently progressing.
+                </p>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-7 ps-xl-5">
+                <a
+                  href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                >
+                  <img
+                    id="udemyimg"
+                    src="../assets/images/udemycourse.jpeg"
+                    class="rounded-2 d-block mx-md-auto img-fluid"
+                    alt="Screenshot of an overview of the Web Development Udemy Course by Dr. Angela Yu"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="col-12 bg-dark mb-0 mt-5 fsection shadow bottom-0">
+      <p class="text-light fs-6 p-4 text-center">
+        Disclaimer: All trademarks, logos, and brand names are the property of
+        their respective owners. Their use on this website is solely for
+        identification and reference purposes. I am not affiliated with,
+        endorsed by, or in partnership with any of the organizations mentioned.
+      </p>
+    </footer>
+
+    <script src="../src/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

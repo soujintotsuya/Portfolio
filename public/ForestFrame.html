@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/stylesheets/forestframe.css">
+    <link rel="stylesheet" href="../src/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+    @media (max-width: 991.98px) {
+        /* also im echten "Mobile-Mode" */
+        .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          /* optional */
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          /* optional */
+          text-align: center;
+          /* Zentrierte Items */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.25rem !important;
+        }
+        #bfwlogo {
+          width: 200%;
+          height: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.5rem !important;
+        }
+    }
+
+    html,body {
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1; /* nimmt den verfügbaren Platz ein → Footer rutscht nach unten */
+    }
+
+    .carousel-item {
+        aspect-ratio: 16 / 9;
+        /* oder 4/3, 3/2, whatever du willst */
+    }
+
+    .section {
+        --bs-bg-opacity: 0.4;
+    }
+
+    .fsection {
+        --bs-bg-opacity: 0.5;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+    }
+
+    .navbar-toggler {
+        z-index: 1030;
+    }
+
+    .imglink > img {
+        width: 100%;
+        aspect-ratio: 916/636;
+        object-fit: cover;
+        object-position: 50% 4%;
+    }
+        </style>
+    <title>Forest Frame</title>
+</head>
+<body class="bg-tealmintdark">
+    <div id="bgcontainer"></div>
+    <header class="sticky-top container col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5  text-center shadow">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid  d-flex align-items-center justify-content-center">
+                <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="140" height="50" viewBox="0 0 700 350" role="img"
+                        aria-label="divrent logo">
+                        <!-- Hintergrund (transparent) -->
+                        <rect width="100%" height="100%" fill="none" />
+    
+                        <!-- Linke Winkelklammer als abgerundeter Strich -->
+                        <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+                        <path d="M56 46 L150 180 L56 314" fill="none" stroke="#000000" stroke-width="36"
+                            stroke-linecap="round" stroke-linejoin="round" opacity="1" />
+    
+                        <!-- Text "divrent" -->
+                        <text x="200" y="230"
+                            font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                            font-weight="700" font-size="162" fill="#000000" letter-spacing="-2">
+                            divrent
+                        </text>
+                    </svg></a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+                        </li>
+    
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu bg-tealmintbright rounded-3">
+                        </li>
+                        <li class=""><a class="bg-tealmintbright dropdown-item text-center"
+                                href="./projectoverview.html">Project Overview</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="bg-tealmintbright dropdown-item text-center" href="./BirthdayInvite.html">Birthday
+                                Invite</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="bg-tealmintbright dropdown-item text-center" href="./MovieRanking.html">Movie
+                                Ranking</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutme.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Contact.html">Contact</a>
+                    </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+    <header>
+        <img alt="a brown earthy logo reading 'Forest Frame' with a pine-tree illustration above the text" id="logo" src="../assets/images/ForestFrameLogo.png"/>
+    </header>
+    <main id="content">
+        <section class="textbubble tb1"> 
+            
+            <img src="../assets/images/LotusFlower.jpg" id="lotus" alt="a blooming lotus flower swimming on water"/>  
+            <h2 class="header tb1header">Elegance in mind</h2>
+            <p class="description tb1des">We always get to work with beauty as our standard. No matter what design you envision, we strive to make it look the best it possibly can.</p>
+            
+            
+        </section>
+        
+        <section class="textbubble tb2">
+            <img src="../assets/images/Engineering.jpg" id="plan" alt="an architects hand drawing construction plans"/>
+            <h2 class="header tb2header">Realising Visions</h2>
+            <p class="description tb2des">We build your online presence according to what you envision from start to finish, no matter the theme or branch.</p>
+
+            
+            
+        </section>
+        <section class="textbubble imgallery">
+            <header id="imghbox"><h2 id="galleryh">Visions brought to life</h2></header>
+            <div class="scrollarea">
+                <img class="expage exp1" src="../assets/images/WebsitePlaceholder.jpg" alt="a simple green website illustration reading 'example website' "/>
+                <img class="expage exp1" src="../assets/images/WebsitePlaceholder.jpg" alt="a simple green website illustration reading 'example website' "/>
+                <img class="expage exp1" src="../assets/images/WebsitePlaceholder.jpg" alt="a simple green website illustration reading 'example website' "/>
+                <img class="expage exp1" src="../assets/images/WebsitePlaceholder.jpg" alt="a simple green website illustration reading 'example website' "/>
+            </div>
+                
+        </section>
+    </main> 
+    <footer class="footer">
+        
+        <p id="motto">Where ideas take root.</p>
+        <p id="disclaimer"> © All rights reserved.</p>
+        
+    </footer>
+    <script src="../src/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

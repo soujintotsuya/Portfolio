@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divrent - Projects</title>
+    <link rel="stylesheet" href="../src/main.css">
+    <style>
+    @media (max-width: 991.98px) {
+        /* also im echten "Mobile-Mode" */
+        .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          /* optional */
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          /* optional */
+          text-align: center;
+          /* Zentrierte Items */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.25rem !important;
+        }
+        #bfwlogo {
+          width: 200%;
+          height: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.5rem !important;
+        }
+    }
+
+    html,body {
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1; /* nimmt den verfügbaren Platz ein → Footer rutscht nach unten */
+    }
+
+    .carousel-item {
+        aspect-ratio: 16 / 9;
+        /* oder 4/3, 3/2, whatever du willst */
+    }
+
+    .section {
+        --bs-bg-opacity: 0.4;
+    }
+
+    .fsection {
+        --bs-bg-opacity: 0.5;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+    }
+
+    .navbar-toggler {
+        z-index: 1030;
+    }
+
+    .imglink > img {
+        width: 100%;
+        aspect-ratio: 916/636;
+        object-fit: cover;
+        object-position: 50% 4%;
+    }
+    </style>
+</head>
+<body class="gradient-background">
+    <header class="sticky-top container col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5  text-center shadow">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid  d-flex align-items-center justify-content-center">
+                <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="140"
+                        height="50" viewBox="0 0 700 350" role="img" aria-label="divrent logo">
+                        <!-- Hintergrund (transparent) -->
+                        <rect width="100%" height="100%" fill="none" />
+    
+                        <!-- Linke Winkelklammer als abgerundeter Strich -->
+                        <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+                        <path d="M56 46 L150 180 L56 314" fill="none" stroke="#000000" stroke-width="36"
+                            stroke-linecap="round" stroke-linejoin="round" opacity="1" />
+    
+                        <!-- Text "divrent" -->
+                        <text x="200" y="230"
+                            font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                            font-weight="700" font-size="162" fill="#000000" letter-spacing="-2">
+                            divrent
+                        </text>
+                    </svg></a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+                        </li>
+    
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu bg-tealmintbright rounded-3">
+                                </li>
+                                <li class=""><a class="bg-tealmintbright dropdown-item text-center" href="./ForestFrame.html">ForestFrame</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="bg-tealmintbright dropdown-item text-center" href="./BirthdayInvite.html">Birthday Invite</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="bg-tealmintbright dropdown-item text-center" href="./MovieRanking.html">Movie Ranking</a></li>
+                            </ul>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="./aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+    <main class="container col-11  bg-body-tertiary fsection rounded-4 my-5">
+        <header><h1 class="text-center display-4 pt-3">Project Overview</h1></header>
+        <section class="container px-4 py-3">
+            <p class="fs-5 fw-light"> As of right now, all projects shown on this page started out as part of a Udemy Fullstack Web Development Course lead by Dr. Angela Yu from App Brewery. They are in order from latest to oldest, although right now, my most recent project would be revamping this portfolio as final project of the course's bootstrap module. These projects - which should be self explanatory if you take a look at them - are mostly practice with no professial or commercial application.</p>
+        </section>
+        <hr class=" col-10 mx-auto border-tealmintbright shadow" style="border-top-width: 3px;" />
+        <section>
+            <div class="container px-4 pt-5 pb-3">
+                <div class="row flex-lg-row-reverse align-items-center g-5 ">
+                    <div class="col-12  col-lg-7"><a href="./ForestFrame.html"> <img alt="A Screenshot of the 'Forest Frame' Project" src="../assets/images/forestframe.jpeg" class="rounded-2 d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes"></a> </div>
+                    <div class="col-lg-5">
+                        <h1 class="display-6 fw-semibold text-body-emphasis lh-1 mb-3">Forest Frame - Web Design Agency Landing Page</h1>
+                        <p class="lead">This project, as part of the mentioned udemy course, stood at the end of the "responsive design" section, right before learning about
+                            Grid, Flexbox and Bootstrap, tho through self teaching I utilized Grid and Flexbox quite a lot to create a nature themed appearance, deviating from the courses goal visuals.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class=" col-10 mx-auto border-tealmintbright shadow" style="border-top-width: 3px;" />
+        <section>
+            <div class="container px-4 py-3">
+                <div class="row align-items-center g-5 ">
+                    <div class="col-12  col-lg-7"><a class="imglink" href="./BirthdayInvite.html"> <img alt="A Screenshot of the 'Birthday Invite' Project" src="../assets/images/BirthDayInvite.jpeg"
+                            class="rounded-2 d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"></a> </div>
+                    <div class="col-lg-5">
+                        <h1 class="display-6 fw-semibold text-body-emphasis lh-1 mb-3">Birthday Invitation Project
+                        </h1>
+                        <p class="lead">When I created this simple website I very obviously did not know anything about CSS yet, so within the limitations of HTML I tried to put together 
+                            the best Birthday Invitation I could at the time. I may revisit this in the future and show off both versions here. <span class="fw-semibold">Note:</span> I have changed the width to fit the viewport. Also the image may differ from how the page is rendered since including bootstrap for the Navbar also changed the text formatting slightly. 
+                        </p>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class=" col-10 mx-auto border-tealmintbright shadow" style="border-top-width: 3px;" />
+        <section>
+            <div class="container px-4 py-3">
+                <div class="row flex-lg-row-reverse align-items-center g-5 ">
+                    <div class="col-12  col-lg-7 "> <a class="imglink" href="./MovieRanking.html"><img alt="A Screenshot of the 'Movie Ranking' Project" src="../assets/images/MovieRanking.jpeg"
+                            class="rounded-2 d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"></a> </div>
+                    <div class="col-lg-5">
+                        <h1 class="display-6 fw-semibold text-body-emphasis lh-1 mb-3">Movie Ranking Project
+                        </h1>
+                        <p class="lead">This stems from when HTML basically felt like a glorified text editor to me. The list sure is debatable and I may also revisit this in the future
+                            but I kinda like the thought of keeping this, as well as the Invitation on here to show off some sort of progress. <span class="fw-semibold">Note:</span> The image may differ from how the page is rendered since including bootstrap for the Navbar also changed the text
+                            formatting slightly.
+                        </p>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="../src/bootstrap.bundle.min.js"></script>
+</body>
+</html>

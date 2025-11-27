@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divrent - Contact</title>
+    <link rel="stylesheet" href="../src/main.css">
+    <style>
+    
+
+    main {
+        height: 90vh;
+    }
+
+    .carousel-item {
+        aspect-ratio: 16 / 9;
+        /* oder 4/3, 3/2, whatever du willst */
+    }
+
+    .section {
+        --bs-bg-opacity: 0.4;
+    }
+
+    .fsection {
+        --bs-bg-opacity: 0.5;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+    }
+
+    .navbar-toggler {
+        z-index: 1030;
+    }
+
+    .imglink > img {
+        width: 100%;
+        aspect-ratio: 916/636;
+        object-fit: cover;
+        object-position: 50% 4%;
+    }
+
+    #contactinfo {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: 1fr;
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #contactinfo p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #discordnamec,#githubnamec,#emailaddressc {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+    
+
+    #emailaddressc {
+        grid-area: 3/2/4/3;
+        
+       
+    }
+
+    #githubnamec {
+        grid-area: 2/2/3/3;
+        
+        
+    }
+
+    #discordnamec {
+        grid-area: 1/2/2/3;
+        
+       
+       
+    }
+
+    #mailiconc {
+        grid-area: 3/1/4/2;
+    }
+ 
+    #githubiconc {
+        grid-area: 2/1/3/2;
+    }
+
+    #discordiconc {
+        grid-area: 1/1/2/2;
+        
+    }
+    #discordiconc > img {
+        width: 3vw;
+    }
+    #mailiconc > img {
+        width: 3vw;
+    }
+    #githubiconc > a > img {
+        width: 3vw;
+    }
+
+   
+    #discordiconc > img {
+          width: 8vw;
+    }
+    #mailiconc > img {
+            width: 8vw;
+    }
+    #githubiconc > a > img {
+            width: 8vw;
+    }
+    
+    @media (min-width: 0px) and (max-width:991.9px) {
+      .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          
+          text-align: center;
+          
+        }
+    }
+
+    @media (min-width:576px) {
+        
+        
+        #discordiconc > img {
+          width: 5vw;
+        }
+        #mailiconc > img {
+            width: 5vw;
+        }
+        #githubiconc > a > img {
+            width: 5vw;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.25rem !important;
+        }
+        #bfwlogo {
+          width: 200%;
+          height: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.5rem !important;
+        }
+        #discordiconc > img {
+        width: 3vw;
+    }
+    #mailiconc > img {
+        width: 3vw;
+    }
+    #githubiconc > a > img {
+        width: 3vw;
+    }
+    }
+    
+    </style>
+    <script src="../src/bootstrap.bundle.min.js"></script>
+</head>
+<body class="gradient-background">
+    <header
+      class="sticky-top mx-auto col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5 text-center shadow">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+          <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="140"
+              height="50"
+              viewBox="0 0 700 350"
+              role="img"
+              aria-label="divrent logo">
+              
+              <rect width="100%" height="100%" fill="none" />
+
+              <!-- Linke Winkelklammer als abgerundeter Strich -->
+              <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+              <path
+                d="M56 46 L150 180 L56 314"
+                fill="none"
+                stroke="#000000"
+                stroke-width="36"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="1"/>
+
+              <!-- Text "divrent" -->
+              <text
+                x="200"
+                y="230"
+                font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                font-weight="700"
+                font-size="162"
+                fill="#000000"
+                letter-spacing="-2">
+                divrent
+              </text>
+            </svg></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Projects</a>
+
+                <ul class="dropdown-menu  bg-tealmintbright rounded-3">
+                  <li>
+                    <a class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/projectoverview.html">Projects Overview</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/ForestFrame.html">ForestFrame</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/BirthdayInvite.html">Birthday Invite</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="bg-tealmintbright dropdown-item text-center"
+                      href="../public/MovieRanking.html">Movie Ranking</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../public/aboutme.html">About Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="d-flex justify-content-center align-items-center">
+        <section class="d-flexflex-column align-items-center col-11 col-md-10 col-lg-8 col-xl-5 rounded-4 bg-body-tertiary section">
+            <h1 class="display-4 fw-normal text-center">Contact</h1>
+            <p class="px-3 py-2 fs-6 text-center">At some point in the future I plan to implement a contact form here, but for now please use one of the following methods to reach out to me: </p>
+            <div class="container col-9 pt-2 my-3 rounded-3 bg-body-tertiary fsection">
+                    <div id="contactinfo" >
+                        <div id="discordiconc"><img alt="discord logo icon" src="../assets/images/discord-icon-svgrepo-com.svg" /></div>
+                        <div id="githubiconc"><a href="https://github.com/soujintotsuya"><img alt="github logo icon" src="../assets/images/github-icon-svgrepo-com.svg"/></a></div>
+                        <div id="mailiconc"><img alt="Envelope Icon" src="../assets/images/envelope-fill.svg"/></div>
+                        <div id="discordnamec"><p class="text-center ">soujindev</p></div>
+                        <div id="githubnamec"><a class="text-decoration-none" href="https://github.com/soujintotsuya"><p class=" text-purplewinkle text-center">Soujin / Divrent</p></a></div>
+                        <div id="emailaddressc"><p class="text-center ">webdev.leonk&#8203;@gmail.com</p></div>
+                    </div>
+            </div>        
+        </section>
+    </main>
+
+    
+</body>
+</html>

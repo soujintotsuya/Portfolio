@@ -1,0 +1,223 @@
+<!-- Write your code below -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Movie Ranking</title>
+   <link rel="stylesheet" href="../src/main.css">
+   <style>
+   @media (max-width: 991.98px) {
+        /* also im echten "Mobile-Mode" */
+        .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          /* optional */
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          /* optional */
+          text-align: center;
+          /* Zentrierte Items */
+        }
+   }
+
+   @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.25rem !important;
+        }
+        #bfwlogo {
+          width: 200%;
+          height: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        /* fs-4 ab xl breakpoint */
+        .fs-6 {
+          font-size: 1.5rem !important;
+        }
+    }
+
+    html,body {
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1; /* nimmt den verfügbaren Platz ein → Footer rutscht nach unten */
+    }
+
+    .carousel-item {
+        aspect-ratio: 16 / 9;
+        /* oder 4/3, 3/2, whatever du willst */
+    }
+
+    .section {
+        --bs-bg-opacity: 0.4;
+    }
+
+    .fsection {
+        --bs-bg-opacity: 0.5;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+    }
+
+    .navbar-toggler {
+        z-index: 1030;
+    }
+
+    .imglink > img {
+        width: 100%;
+        aspect-ratio: 916/636;
+        object-fit: cover;
+        object-position: 50% 4%;
+    }
+      </style>
+ </head>
+ <body>
+   <header class="sticky-top container col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5  text-center shadow">
+      <nav class="navbar navbar-expand-lg ">
+         <div class="container-fluid  d-flex align-items-center justify-content-center">
+            <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="140" height="50" viewBox="0 0 700 350" role="img" aria-label="divrent logo">
+                  <!-- Hintergrund (transparent) -->
+                  <rect width="100%" height="100%" fill="none" />
+   
+                  <!-- Linke Winkelklammer als abgerundeter Strich -->
+                  <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+                  <path d="M56 46 L150 180 L56 314" fill="none" stroke="#000000" stroke-width="36" stroke-linecap="round"
+                     stroke-linejoin="round" opacity="1" />
+   
+                  <!-- Text "divrent" -->
+                  <text x="200" y="230"
+                     font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                     font-weight="700" font-size="162" fill="#000000" letter-spacing="-2">
+                     divrent
+                  </text>
+               </svg></a>
+   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+                  </li>
+   
+                  
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Projects
+                     </a>
+                     <ul class="dropdown-menu bg-tealmintbright rounded-3">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center" href="./projectoverview.html">Project Overview</a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center"
+                        href="./ForestFrame.html">ForestFrame</a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center" href="./BirthdayInvite.html">Birthday
+                        Invite</a></li>
+                  
+                  
+               </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./aboutme.html">About Me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./Contact.html">Contact</a>
+               </li>
+   
+               </ul>
+            </div>
+         </div>
+      </nav>
+   
+   </header>
+   
+    <h1>The Objectively Best Movies of All Time</h1>
+    <h2>YOUR soon-to-be Top 5 Movies</h2>
+    <hr />
+    <h3>Princess Mononoke</h3>
+    <p>Princess Mononoke is a Studio Ghibli film directed by Hayao Miyazaki. 
+      It tells the story of Ashitaka, a young prince who is cursed by a demon and travels west to find a cure.
+      On his journey, he discovers a conflict between humans and the spirits of the forest.
+      He meets San, a girl raised by wolves, who fights to protect nature from the iron town led by Lady Eboshi. 
+      While San sees humans as destroyers, Ashitaka tries to understand both sides. 
+      He hopes to bring peace between people and the forest before everything is lost.
+    </p>
+    <h3>Spirited Away</h3>
+    <p>
+    In its core this movie is about the damage that endless consumption deals to nature, as Chihiro
+    steps into a magical realm in which a bathing house and its running continiously harms "Haku", 
+    the personified river spirit symbolizing nature itself. 
+    At the same time, it also tells a story about remembering one’s true self and values in a world driven by greed, 
+    as Chihiro learns courage, responsibility and empathy while trying to save Haku. 
+    </p>
+    <h3>In Time</h3>
+    <p>
+    Time has become currency and the wealthy hoard it making them virtually immortal, while the 
+    working class merely lives from day to day. I like this movie because it drastically puts into 
+    practice what highly uneven distribution of wealth, even if the picture is a little abstract,
+    actually brings upon the biggest part of society.    
+    </p>
+    <h3>Butterfly Effect</h3>
+    <p>
+    In this movie Ashton Kutcher plays a boy/young man growing up, but each time he remembers another 
+    detail about his past he wasn't perviously aware of, like it didn't happen, the present also changes
+    drastically, just like the butterfly effect says.    
+    </p>
+    <h3>John Wick Series</h3>
+    <p>
+    This movie series isn't deep in any sense, it's just pure action and fighting to please that silent 
+    need for revenge in your brain if it emerges from time to time. It is incredibly well choreographed 
+    and depicted, but far from that, this list could go well without it.   
+    </p>
+    <script src="../src/bootstrap.bundle.min.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,34 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won’t be available)
+@import "../../node_modules/bootstrap/scss/functions.scss";
+@import "../../node_modules/bootstrap/scss/variables.scss";
+
+$tealmint:#44ecac;
+$tealmintdark: darken($tealmint, 20%);
+$tealmintlight: lighten($tealmint, 18%);
+$tealmintbright: lighten($tealmint, 25%);
+$tealmintbg:#a7f7cb;
+$purplewinkle:#8251ed;
+$purplewinkledark: darken($purplewinkle, 10%);
+$purplewinklelight: lighten($purplewinkle, 10%);
+$purplewinklebright: lighten($purplewinkle, 25%);
+
+$custom-colors: (
+    "purplewinkle":$purplewinkle,
+    "purplewinkledark":$purplewinkledark,
+    "purplewinklelight":$purplewinklelight,
+    "purplewinklebright":$purplewinklebright,
+    "tealmint": $tealmint,
+    "tealmintdark":$tealmintdark,
+    "tealmintlight":$tealmintlight,
+    "tealmintbright":$tealmintbright,
+    "tealmintbg":$tealmintbg,
+    
+);
+
+$theme-colors: map-merge($theme-colors , $custom-colors );
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here
