@@ -142,8 +142,8 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
-html {
-  background-color: #000;
+html, body {
+  background: transparent !important;
 }
 .gradient-background {
   position: relative;
@@ -154,8 +154,10 @@ html {
 .gradient-background::before {
   content: "";
   position: fixed;
-  /* wichtig: ersetzt background-attachment: fixed */
-  inset: 0;
+  top: -20vh;
+  left: -20vw;
+  width: 140vw;
+  height: 140vh;
   z-index: -1;
 
   background: linear-gradient(120deg, #00FF9C, #d409fd);
