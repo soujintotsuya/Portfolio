@@ -142,12 +142,26 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
-
+html {
+  background-color: #000;
+}
 .gradient-background {
+  position: relative;
+  background: transparent;
+}
+
+/* Der animierte Hintergrund */
+.gradient-background::before {
+  content: "";
+  position: fixed;
+  /* wichtig: ersetzt background-attachment: fixed */
+  inset: 0;
+  z-index: -1;
+
   background: linear-gradient(120deg, #00FF9C, #d409fd);
   background-size: 200% 200%;
   animation: gradient-animation 12s ease infinite;
-  background-attachment: fixed;
+  pointer-events: none;
 }
 
 @keyframes gradient-animation {
