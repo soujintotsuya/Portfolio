@@ -4,14 +4,135 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spielerei</title>
-        <link rel="stylesheet" href="./assets/style/neongrove.css">
+        <link rel="stylesheet" href="../src/main.css">
+        <link rel="stylesheet" href="../assets/stylesheets/neongrove.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Didact+Gothic&display=swap" rel="stylesheet">
-        <script src="./assets/scripts/contact.js"></script>
+        <script src="../src/bootstrap.bundle.min.js"></script>
+        <script src="../assets/scripts/contact.js"></script>
+        <style>
+            header.sticky-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 100%;
+}
+
+            @media (max-width: 991.98px) {
+        /* also im echten "Mobile-Mode" */
+        .navbar-nav {
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 1rem;
+          /* optional */
+        }
+
+        .navbar .dropdown-menu {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          transform: translateY(0);
+          /* optional */
+          text-align: center;
+          /* Zentrierte Items */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          padding-left: 1rem;
+          /* optional: Abstand zum Rand */
+        }
+
+        .navbar-nav {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    }
+        </style>
     </head>
     <body>
-        <header class="bgcontainer"><h1><img src="./assets/images/Neongrove Faceplant.png" alt="A purple neon-sign-style logo reading 'Neon Grove' at the top and 'Feel the future's pulse' below." /></h1></header>
+        <header class="sticky-top container col-12 col-sm-10 col-lg-8 bg-tealmint mt-0 rounded-bottom-5  text-center shadow"><nav class="navbar navbar-expand-lg ">
+         <div class="container-fluid   d-flex align-items-center justify-content-center">
+            <a class="navbar-brand ps-4 mx-auto mx-lg-0" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="140" height="50" viewBox="0 0 700 350" role="img" aria-label="divrent logo">
+                  <!-- Hintergrund (transparent) -->
+                  <rect width="100%" height="100%" fill="none" />
+   
+                  <!-- Linke Winkelklammer als abgerundeter Strich -->
+                  <!-- Path: von oben links nach mitte unten, mit dicker, abgerundeter Linie -->
+                  <path d="M56 46 L150 180 L56 314" fill="none" stroke="#000000" stroke-width="36" stroke-linecap="round"
+                     stroke-linejoin="round" opacity="1" />
+   
+                  <!-- Text "divrent" -->
+                  <text x="200" y="230"
+                     font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+                     font-weight="700" font-size="162" fill="#000000" letter-spacing="-2">
+                     divrent
+                  </text>
+               </svg></a>
+   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+                  </li>
+   
+                  
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Projects
+                     </a>
+                     <ul class="dropdown-menu bg-tealmintbright rounded-3">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center" href="./projectoverview.html">Project Overview</a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  
+                  <li><a class="bg-tealmintbright dropdown-item text-center"
+                        href="./ForestFrame.html">ForestFrame</a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center" href="./BirthdayInvite.html">Birthday
+                        Invite</a></li>
+                  <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="bg-tealmintbright dropdown-item text-center" href="./MovieRanking.html">Movie Ranking</a></li>      
+                  
+                  
+               </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./aboutme.html">About Me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./Contact.html">Contact</a>
+               </li>
+   
+               </ul>
+            </div>
+         </div>
+      </nav></header>
+        <header class="bgcontainer">
+            <h1><img src="../assets/images/Neongrove Faceplant.png" alt="A purple neon-sign-style logo reading 'Neon Grove' at the top and 'Feel the future's pulse' below." /></h1></header>
         
         <main>
             <section class="featurepage">
@@ -20,23 +141,23 @@
                 <h2 class="sectionheader">The Cyberpunk Experience</h2>
                 </div>
                 <div class="neontextbox nb1">
-                    <img class="featureimg" src="./assets/images/cyberpunkbedroom.jpg"/>
+                    <img class="featureimg" src="../assets/images/cyberpunkbedroom.jpg"/>
                     <h3 class="featureheader">Futuristic Apartments</h3>
                     <p class="featuredescription">Enjoy, explore and find rest in your loft right beneath the vibrant neon lights of the city.</p>
                 </div>
                 <div class="neontextbox nb2">
-                    <img class="featureimg" src="./assets/images/cyberpunkfood.jpeg" />
+                    <img class="featureimg" src="../assets/images/cyberpunkfood.jpeg" />
                     <h3 class="featureheader">Food out of this timeline!</h3>
                     <p class="featuredescription">Be ready to have your taste buds elevated into the most delicious future fathomable.</p>
                 </div>
                 <div class="neontextbox nb3">
-                    <img class="featureimg" src="./assets/images/cyberpunkspa.jpg"/>
+                    <img class="featureimg" src="../assets/images/cyberpunkspa.jpg"/>
                     <h3 class="featureheader">Recharge your battery!</h3>
                     <p class="featuredescription">Drift away and let the comofort of a distant future recharge you mind and body.</p>
                 </div>
             </section><div id="sectionsep2"></div>
             <section class="bgcontainerb">
-                <img id="hero" src="./assets/images/cyberpunklobbymobile.png" />
+                <img id="hero" src="../assets/images/cyberpunklobbymobile.png" />
                 <h2 id="contactheader" class="contacttext">Plan your stay!</h2>
                 <h3 id="addressheader" class="contacttext">You Can Find us at:</h3>
                 <p id="address" class="contacttext">Neon Grove Hotel<br>
@@ -44,7 +165,7 @@
                     New Eden, Orion District
                 </p>
                 <p id="or" class="contacttext">or</p>
-                <p id="reservation" class="contacttext"><a href="./index.html">place your reservation here.</a></p>
+                <p id="reservation" class="contacttext"><a href="./neongrove.html">place your reservation here.</a></p>
                 <div id="contactbottom"></div>
             </section>
         </main>
