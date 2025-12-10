@@ -1,3 +1,7 @@
+:root {
+    --vh: 1vh;
+}
+
 body {
    margin: 0;
    padding: 0;
@@ -63,7 +67,7 @@ body {
 
 
 .bgcontainer {
-    height: 100vh;
+    height: calc(var(--vh) * 100);
     background-image: url(../images/StockCake-cyberpunk_city_panorama_cityscape_Images_and_Photos_1764592419.jpg);
     background-position: center center;
     background-size: cover;
@@ -224,7 +228,7 @@ body {
 .bgcontainerb {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh) * 100);
     overflow: hidden;
     
 }
@@ -437,7 +441,7 @@ footer {
 
     }
     
-    .featuredescription , .address {
+    .featuredescription , #address {
         font-size: 1.8rem;
     }
 
@@ -529,15 +533,19 @@ footer {
     }
 
     .featurepage {
-        height: 110vh;
+        height: calc(var(--vh) * 110);
         
     }
 
-    
+    #address {
+        line-height: 1.2;
+    }
+
+    #or {
+        font-size: 1.4rem;
+    }
     
     
 }
-
-
 
 
