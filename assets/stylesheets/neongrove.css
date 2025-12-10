@@ -371,6 +371,46 @@ footer {
     }
 }
 
+@media (max-height:500px) and (orientation: landscape) {
+    .featureimg {
+    
+            z-index: 1;
+            grid-column: span 1;
+            grid-row: span 3;
+            border-bottom: none;
+            border-right: 3px solid white;
+        }
+    
+        .featureheader {
+            grid-column: span 1;
+            position: relative;
+            margin-top: 0;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            font-size: 1.8rem;
+    
+    
+        }
+    
+        .featuredescription {
+            grid-column: span 1;
+            grid-row: span 2;
+            padding-top: 0;
+            font-size: 1.2rem;
+    
+        }
+
+        #address {
+            line-height: 1.2;
+        }
+
+        #address, #or {
+            font-size: 0.8rem;
+        }
+
+
+}
+
 @media (min-width:972px) {
     .featureimg {
         
@@ -496,5 +536,6 @@ footer {
     
     
 }
+
 
 
