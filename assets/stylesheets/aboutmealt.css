@@ -1,0 +1,388 @@
+
+
+
+
+html{
+    background: transparent;
+    overflow-x:hidden;
+    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#pagehead {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.363);
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding: 0;
+    margin: 0.3rem;
+    line-height: 1.3;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        
+}
+
+.gradient-background {
+    background: transparent;
+}
+
+/* Der animierte Hintergrund */
+.gradient-background::before {
+    content: "";
+    position: fixed;
+    top: -20vh;
+    left: -20vw;
+    width: 140vw;
+    height: 140vh;
+    z-index: -1;
+
+    background: linear-gradient(120deg, #00FF9C, #d409fd);
+    background-size: 200% 200%;
+    animation: gradient-animation 12s ease infinite;
+    pointer-events: none;
+}
+
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+h1 > span {
+    font-family: "Cairo", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+
+
+#contentcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 1rem;
+    border-radius: 2rem;
+    border: 5px solid black;
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+#contentcontainer > p {
+    padding: 1.5rem;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.3rem;
+    text-align:center;
+}
+
+.mobile {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    margin: 1rem 0;
+    
+}
+
+.desktop {
+    display: none;
+}
+
+.chevopen {
+    width: 100%;
+    grid-area:1/1/2/2 ;
+    
+    
+}
+
+.chevclosed {
+    width: 100%;
+    grid-area:1/3/2/4;
+    
+    }
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    grid-area: 1/2/2/3;
+    font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        align-self:center;
+        justify-self:center
+}
+
+h2 > span {
+    font-family: "Didact Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+
+
+section  p {
+    margin: 1rem 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: "Didact Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        grid-area: 3/1/5/4;
+        
+}
+
+#logocontainer {
+    grid-area: 5/1/6/4;
+    ;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+#logocontainer > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+}
+
+#bfwlogod {
+
+    width: 100%;
+    max-width: 700px;
+
+}
+
+#udemyscs {
+    padding: 1rem 0;
+    width: 90%;
+    max-height: 400px;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: rgba(102, 102, 102, 0.397);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid black;
+}
+
+footer > p {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    max-width:900px;
+    margin: 0;
+}
+
+@media (min-width:500px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    section  p {
+        font-size: 1.3rem;
+    }
+
+    #contentcontainer p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width:900px) {
+    #contentcontainer {
+        width: 50vw;
+        margin: 3rem auto;
+    }
+
+    .desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:auto ;
+        margin: 1rem 0;
+        
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .chevflow {
+        grid-area: 2/1/3/4;
+       
+    }
+
+    .chevopen {
+       width: 30%;
+       float: left;
+       shape-outside: url(../images/chevopen.png);
+       shape-margin: 0.5rem;
+    }
+
+    .chevclosed {
+        width: 30%;
+        float: right;
+        shape-outside: url(../images/chevclosed.png);
+        shape-margin: 0.5rem;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.4rem;
+        
+    }
+
+    .chevflow p {
+        font-size: 1rem;
+        margin: 1rem 0;
+         padding: 0;
+    }
+
+        #logocontainer {
+            grid-area: 3/1/4/4;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.342);
+            
+        }
+    
+        #bfwlogod {
+    
+            width: 70%;
+            max-width: 700px;
+    
+        }
+}
+
+
+
+@media (min-width:1024px) {
+    .chevflow p {
+        font-size: 1.1rem;
+        
+    }
+
+    h2 {
+        margin-top: 1.2rem;
+    }
+
+        #contentcontainer p {
+            font-size: 1.8rem;
+        }
+
+    footer > p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .chevflow p {
+        margin-top: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    #progressd {
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:1400px) {
+
+    h2 {
+        margin-top: 1.5rem;
+    }
+
+    .chevclosed , .chevopen {
+        shape-margin: 1rem;
+    }
+
+    .chevflow p {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:1600px) {
+    .chevflow p {
+        margin-top: 2.5rem;
+        font-size: 1.7rem;
+    }
+
+    #progressd {
+        margin-top: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    footer > p {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (min-width:1800px) {
+    .chevflow p {
+        margin-top: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    #progressd {
+        margin-top: 5.5rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
